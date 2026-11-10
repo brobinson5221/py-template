@@ -23,6 +23,7 @@ exclude = [
     ".git",
     ".github",
     ".vscode",
+    "LICENSE"
 ]
 
 [tool.ruff.lint]
