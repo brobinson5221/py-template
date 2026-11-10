@@ -97,4 +97,10 @@ uv run --locked ruff format --check .
 
 Check results in your repository's **Actions** tab. CI reports lint and formatting
 errors without editing files. The template does not yet include automated tests
-or commit-message validation in CI.
+or individual commit-message validation in CI.
+
+The [PR title workflow](.github/workflows/pr-title.yml) checks pull request titles
+against Conventional Commits, for example `docs: clarify template setup`. It runs
+when a PR is opened, updated, reopened, or its title is edited. Direct pushes do
+not trigger this workflow. Use squash merging with the PR title as the commit
+message to carry the validated title into your project's history.
